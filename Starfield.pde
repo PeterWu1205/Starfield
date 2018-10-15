@@ -2,8 +2,8 @@ Particle[] bob;
 void setup()
 {
   size(600,600);
-  bob = new Particle[100];
-  for(int i = 0; i < 100; i++)
+  bob = new Particle[3000];
+  for(int i = 0; i < bob.length; i++)
   {
     bob[i] = new NormalParticle();
   }
@@ -13,7 +13,7 @@ void setup()
 void draw()
 {
   background(255);
-  for(int i =0 ; i < 100; i++)
+  for(int i =0 ; i < bob.length; i++)
   {
     bob[i].show();
     bob[i].move();
@@ -51,10 +51,12 @@ class OddballParticle implements Particle
   void show()
   {
     fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
-    rect(myX,myY,200,200);
+    rect(myX,myY,50,50);
   }
   void move()
   {
+    myX = 300;
+    myY = 300;
     myX = myX + (int)(Math.random()*25);
     myY = myY + (int)(Math.random()*25);
   }
