@@ -66,6 +66,6 @@ class JumboParticle extends NormalParticle
   void show()
   {
     fill(0);
-    ellipse((float)myX,(float)myY,100,100);
+    rect((float)myX,(float)myY,50,50);
   }
 }
