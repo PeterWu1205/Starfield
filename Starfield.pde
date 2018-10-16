@@ -32,7 +32,7 @@ class NormalParticle implements Particle
   void show()
   {
     fill(0);
-    ellipse((float)myX,(float)myY,5,5);
+    rect((float)myX,(float)myY,5,5);
   }
   void move()
   {
@@ -66,6 +66,6 @@ class JumboParticle extends NormalParticle
   void show()
   {
     fill(0);
-    rect((float)myX,(float)myY,50,50);
+    ellipse((float)myX,(float)myY,50,50);
   }
 }
